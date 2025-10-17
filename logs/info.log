@@ -1,0 +1,5 @@
+[2025-10-17 11:18:17,977] INFO in autoreload: Watching for file changes with StatReloader
+[2025-10-17 11:18:29,615] WARNING in log: Not Found: /
+[2025-10-17 11:18:29,616] WARNING in basehttp: "GET / HTTP/1.1" 404 2453
+[2025-10-17 11:55:50,537] INFO in autoreload: Watching for file changes with StatReloader
+[2025-10-17 11:58:48,285] INFO in autoreload: Watching for file changes with StatReloader

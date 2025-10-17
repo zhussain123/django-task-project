@@ -1,0 +1,973 @@
+INFO 2025-10-17 12:01:32,653 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 12:12:20,720 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 12:13:14,370 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 12:16:55,992 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-17 12:17:03,471 log Not Found: /
+WARNING 2025-10-17 12:17:03,472 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 12:17:47,484 views Fetching active companies with revenue...
+ERROR 2025-10-17 12:17:47,485 views Error fetching company revenue: Cannot resolve keyword 'companystats' into field. Choices are: address, auditentry, companyexecutives, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 62, in get
+    .values(
+     ~~~~~~^
+        'companyname', 'website', 'industry',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        revenue=models.F('companystats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2050, in resolve_ref
+    join_info = self.setup_joins(
+        field_list, self.get_meta(), self.get_initial_alias(), can_reuse=reuse
+    )
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'companystats' into field. Choices are: address, auditentry, companyexecutives, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+ERROR 2025-10-17 12:17:47,580 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 12:17:47,581 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:17:47,594 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,596 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,596 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,598 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,598 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,599 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,600 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,600 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,600 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,604 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,605 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-10-17 12:17:47,609 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-10-17 12:18:23,997 views Fetching active premium users...
+INFO 2025-10-17 12:18:29,418 views Returned 825 active premium users.
+INFO 2025-10-17 12:18:29,928 basehttp "GET /api/active-premium-users/ HTTP/1.1" 200 3752942
+INFO 2025-10-17 12:19:00,978 views Fetching executive information...
+ERROR 2025-10-17 12:19:00,979 views Error fetching executives info: Cannot resolve keyword 'companyexecutives' into field. Choices are: company_name, contactid, contactid_id, email, email_status, error, file_name, fname, id, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 82, in get
+    .filter(
+     ~~~~~~^
+        companyexecutives__companyid__in=[196, 199, 225, 296],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        companyexecutives__type='Executive'
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'companyexecutives' into field. Choices are: company_name, contactid, contactid_id, email, email_status, error, file_name, fname, id, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-17 12:19:01,002 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-17 12:19:01,003 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:19:14,539 views Fetching digest stats for digest_id=28361...
+ERROR 2025-10-17 12:19:14,539 views Error fetching digest email stats: Cannot resolve keyword 'saveddigests' into field. Choices are: amazon_id, campaign_id, click_count, companyname, contactid, creation_date, designation, digestid, email_date, gmail_id, id, is_complain, mandrill_id, open_count, recipient_email, resends, sender_email, sendgrid_id, smtp_events, state, subject, tags, typeid, unix_date, unix_time, user_id, version
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 108, in get
+    .filter(saveddigests__digest_id=digest_id)
+     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'saveddigests' into field. Choices are: amazon_id, campaign_id, click_count, companyname, contactid, creation_date, designation, digestid, email_date, gmail_id, id, is_complain, mandrill_id, open_count, recipient_email, resends, sender_email, sendgrid_id, smtp_events, state, subject, tags, typeid, unix_date, unix_time, user_id, version
+ERROR 2025-10-17 12:19:14,543 log Internal Server Error: /api/digest-stats/
+ERROR 2025-10-17 12:19:14,545 basehttp "GET /api/digest-stats/?digest_id=28361 HTTP/1.1" 500 5395
+INFO 2025-10-17 12:20:15,180 views Fetching premium users...
+INFO 2025-10-17 12:20:18,704 views Returned 1238 premium users.
+INFO 2025-10-17 12:20:18,821 basehttp "GET /api/premium-users/ HTTP/1.1" 200 284209
+INFO 2025-10-17 12:27:32,682 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\models.py changed, reloading.
+INFO 2025-10-17 12:27:33,447 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 12:29:28,453 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py changed, reloading.
+INFO 2025-10-17 12:29:29,066 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 12:29:33,512 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-17 12:29:41,261 log Not Found: /
+WARNING 2025-10-17 12:29:41,262 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 12:29:46,241 views Fetching active companies with revenue...
+ERROR 2025-10-17 12:29:46,242 views Error fetching company revenue: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyexecutives, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2238, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyexecutives, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    ).values('CompanyName', 'WebSite', 'Industry', 'company_stats__revenue')
+      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1363, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2577, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2279, in add_fields
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyexecutives, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+ERROR 2025-10-17 12:29:46,271 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 12:29:46,272 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:29:57,643 views Fetching active companies with revenue...
+ERROR 2025-10-17 12:29:57,644 views Error fetching company revenue: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyexecutives, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2238, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyexecutives, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    ).values('CompanyName', 'WebSite', 'Industry', 'company_stats__revenue')
+      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1363, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2577, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2279, in add_fields
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyexecutives, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+ERROR 2025-10-17 12:29:57,650 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 12:29:57,651 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:35:09,520 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-17 12:35:25,547 log Not Found: /
+WARNING 2025-10-17 12:35:25,548 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 12:35:34,933 views Fetching executive information...
+ERROR 2025-10-17 12:35:34,934 views Error fetching executives info: Cannot resolve keyword 'companyexecutives' into field. Choices are: company_name, contactid, contactid_id, email, email_status, error, file_name, fname, id, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 78, in get
+    .filter(
+     ~~~~~~^
+        companyexecutives__companyid__in=[196, 199, 225, 296],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        companyexecutives__type='Executive'
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'companyexecutives' into field. Choices are: company_name, contactid, contactid_id, email, email_status, error, file_name, fname, id, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-17 12:35:34,969 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-17 12:35:34,970 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:40:52,990 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-17 12:40:59,206 log Not Found: /
+WARNING 2025-10-17 12:40:59,207 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 12:41:08,404 views Fetching executive information...
+ERROR 2025-10-17 12:41:08,406 views Error fetching executives info: The annotation 'company_name' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 83, in get
+    .values(
+     ~~~~~~^
+        executive_names=models.F('fname'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        company_name=models.F('executive_links__companyid__companyname')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'company_name' conflicts with a field on the model.
+ERROR 2025-10-17 12:41:08,436 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-17 12:41:08,437 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:48:40,342 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py changed, reloading.
+INFO 2025-10-17 12:48:41,032 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 12:48:57,032 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-17 12:49:04,580 log Not Found: /
+WARNING 2025-10-17 12:49:04,581 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 12:49:15,745 views Fetching executive information...
+INFO 2025-10-17 12:49:19,401 views Returned 232 executives.
+INFO 2025-10-17 12:49:19,455 basehttp "GET /api/executives-info/ HTTP/1.1" 200 98869
+INFO 2025-10-17 12:49:33,795 views Fetching executive information...
+INFO 2025-10-17 12:49:36,848 views Returned 232 executives.
+INFO 2025-10-17 12:49:36,868 basehttp "GET /api/executives-info/ HTTP/1.1" 200 98869
+INFO 2025-10-17 12:51:46,557 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py changed, reloading.
+INFO 2025-10-17 12:51:47,231 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 12:52:12,862 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py changed, reloading.
+INFO 2025-10-17 12:52:13,516 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 12:55:50,195 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-17 12:55:56,725 log Not Found: /
+WARNING 2025-10-17 12:55:56,727 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 12:55:59,461 views Fetching digest email stats for digest_id=28361...
+ERROR 2025-10-17 12:55:59,462 views Error fetching digest email stats: Cannot resolve keyword 'saveddigests' into field. Choices are: amazon_id, campaign_id, click_count, companyname, contactid, creation_date, designation, digestid, email_date, gmail_id, id, is_complain, mandrill_id, open_count, recipient_email, resends, sender_email, sendgrid_id, smtp_events, state, subject, tags, typeid, unix_date, unix_time, user_id, version
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 107, in get
+    .filter(saveddigests__digest_id=digest_id)
+     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'saveddigests' into field. Choices are: amazon_id, campaign_id, click_count, companyname, contactid, creation_date, designation, digestid, email_date, gmail_id, id, is_complain, mandrill_id, open_count, recipient_email, resends, sender_email, sendgrid_id, smtp_events, state, subject, tags, typeid, unix_date, unix_time, user_id, version
+ERROR 2025-10-17 12:55:59,499 log Internal Server Error: /api/digest-stats/
+ERROR 2025-10-17 12:55:59,500 basehttp "GET /api/digest-stats/?digest_id=28361 HTTP/1.1" 500 5395
+INFO 2025-10-17 12:56:02,709 views Fetching active companies with revenue...
+ERROR 2025-10-17 12:56:02,710 views Error fetching company revenue: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2238, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    ).values('CompanyName', 'WebSite', 'Industry', 'company_stats__revenue')
+      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1363, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2577, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2279, in add_fields
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+ERROR 2025-10-17 12:56:02,714 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 12:56:02,715 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:56:03,726 views Fetching active companies with revenue...
+ERROR 2025-10-17 12:56:03,727 views Error fetching company revenue: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2238, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    ).values('CompanyName', 'WebSite', 'Industry', 'company_stats__revenue')
+      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1363, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2577, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2279, in add_fields
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+ERROR 2025-10-17 12:56:03,731 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 12:56:03,732 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:56:03,909 views Fetching active companies with revenue...
+ERROR 2025-10-17 12:56:03,910 views Error fetching company revenue: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2238, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    ).values('CompanyName', 'WebSite', 'Industry', 'company_stats__revenue')
+      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1363, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2577, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2279, in add_fields
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+ERROR 2025-10-17 12:56:03,914 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 12:56:03,915 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:56:04,461 views Fetching active companies with revenue...
+ERROR 2025-10-17 12:56:04,462 views Error fetching company revenue: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2238, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    ).values('CompanyName', 'WebSite', 'Industry', 'company_stats__revenue')
+      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1363, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2577, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2279, in add_fields
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+ERROR 2025-10-17 12:56:04,467 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 12:56:04,468 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:56:04,653 views Fetching active companies with revenue...
+ERROR 2025-10-17 12:56:04,654 views Error fetching company revenue: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2238, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    ).values('CompanyName', 'WebSite', 'Industry', 'company_stats__revenue')
+      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1363, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2577, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2279, in add_fields
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'CompanyName' into field. Choices are: address, auditentry, company_stats, companyid, companyimage, companyname, count, country, created_date, description, domain, duns_id, executives, hottopicid, industry, latitude, launchpadimage, linkedinhandler, linkedinresponse, linkedinreviewflag, logo, longitude, rank, reviewflag, sector, status, stockexchange, ticketsymbol, twitterhandler, twitterreviewflag, twittersearch, updated_date, website
+ERROR 2025-10-17 12:56:04,658 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 12:56:04,658 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 12:59:48,531 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\models.py changed, reloading.
+INFO 2025-10-17 12:59:49,208 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:01:32,283 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py changed, reloading.
+INFO 2025-10-17 13:01:32,998 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:02:12,156 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\models.py changed, reloading.
+INFO 2025-10-17 13:02:13,080 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:03:34,115 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\urls.py changed, reloading.
+INFO 2025-10-17 13:03:34,780 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:04:08,691 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-17 13:04:15,577 log Not Found: /
+WARNING 2025-10-17 13:04:15,579 basehttp "GET / HTTP/1.1" 404 2304
+WARNING 2025-10-17 13:04:16,916 log Not Found: /
+WARNING 2025-10-17 13:04:16,917 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 13:04:27,074 views Fetching active companies with revenue...
+ERROR 2025-10-17 13:04:27,075 views Error fetching company revenue: The annotation 'revenue' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    .values(
+     ~~~~~~^
+        company_id=models.F('comanyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        updated=models.F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'revenue' conflicts with a field on the model.
+ERROR 2025-10-17 13:04:27,101 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 13:04:27,101 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 13:04:28,522 views Fetching active companies with revenue...
+ERROR 2025-10-17 13:04:28,523 views Error fetching company revenue: The annotation 'revenue' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    .values(
+     ~~~~~~^
+        company_id=models.F('comanyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        updated=models.F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'revenue' conflicts with a field on the model.
+ERROR 2025-10-17 13:04:28,526 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 13:04:28,527 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 13:04:28,704 views Fetching active companies with revenue...
+ERROR 2025-10-17 13:04:28,705 views Error fetching company revenue: The annotation 'revenue' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    .values(
+     ~~~~~~^
+        company_id=models.F('comanyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        updated=models.F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'revenue' conflicts with a field on the model.
+ERROR 2025-10-17 13:04:28,708 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 13:04:28,709 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 13:04:28,897 views Fetching active companies with revenue...
+ERROR 2025-10-17 13:04:28,898 views Error fetching company revenue: The annotation 'revenue' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 63, in get
+    .values(
+     ~~~~~~^
+        company_id=models.F('comanyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        updated=models.F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'revenue' conflicts with a field on the model.
+ERROR 2025-10-17 13:04:28,901 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 13:04:28,902 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 13:04:37,675 views Fetching digest email stats for digest_id=28361...
+ERROR 2025-10-17 13:04:37,675 views Error fetching digest email stats: Cannot resolve keyword 'saveddigests' into field. Choices are: amazon_id, campaign_id, click_count, companyname, contactid, creation_date, designation, digestid, email_date, gmail_id, id, is_complain, mandrill_id, open_count, recipient_email, resends, sender_email, sendgrid_id, smtp_events, state, subject, tags, typeid, unix_date, unix_time, user_id, version
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 113, in get
+    .filter(saveddigests__digest_id=digest_id)
+     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'saveddigests' into field. Choices are: amazon_id, campaign_id, click_count, companyname, contactid, creation_date, designation, digestid, email_date, gmail_id, id, is_complain, mandrill_id, open_count, recipient_email, resends, sender_email, sendgrid_id, smtp_events, state, subject, tags, typeid, unix_date, unix_time, user_id, version
+ERROR 2025-10-17 13:04:37,680 log Internal Server Error: /api/digest-stats/
+ERROR 2025-10-17 13:04:37,681 basehttp "GET /api/digest-stats/?digest_id=28361 HTTP/1.1" 500 5395
+WARNING 2025-10-17 13:05:03,700 log Not Found: /
+WARNING 2025-10-17 13:05:03,701 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 13:09:40,034 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py changed, reloading.
+INFO 2025-10-17 13:09:40,895 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:09:59,491 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:10:11,746 views Fetching digest email stats for digest_id=28361...
+INFO 2025-10-17 13:10:14,857 views Returned 1 digest stats for digest_id=28361.
+INFO 2025-10-17 13:10:14,903 basehttp "GET /api/digest-stats/?digest_id=28361 HTTP/1.1" 200 5443
+INFO 2025-10-17 13:10:24,124 views Fetching digest email stats for digest_id=28361...
+INFO 2025-10-17 13:10:26,903 views Returned 1 digest stats for digest_id=28361.
+INFO 2025-10-17 13:10:26,906 basehttp "GET /api/digest-stats/?digest_id=28361 HTTP/1.1" 200 5443
+INFO 2025-10-17 13:13:12,454 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\models.py changed, reloading.
+INFO 2025-10-17 13:13:13,141 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:13:42,123 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py changed, reloading.
+INFO 2025-10-17 13:13:42,766 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:14:00,757 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py changed, reloading.
+INFO 2025-10-17 13:14:01,406 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:14:15,823 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 13:14:19,581 views Fetching latest company revenue (ORM version)...
+ERROR 2025-10-17 13:14:32,267 views Error fetching company revenue: The annotation 'company_id' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 75, in get
+    .values(
+     ~~~~~~^
+        company_id=F('company__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        last_updated=F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'company_id' conflicts with a field on the model.
+ERROR 2025-10-17 13:14:32,357 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 13:14:32,359 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 13:14:44,413 views Fetching latest company revenue (ORM version)...
+ERROR 2025-10-17 13:14:57,337 views Error fetching company revenue: The annotation 'company_id' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 75, in get
+    .values(
+     ~~~~~~^
+        company_id=F('company__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        last_updated=F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'company_id' conflicts with a field on the model.
+ERROR 2025-10-17 13:14:57,396 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 13:14:57,398 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 14:54:08,493 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 14:54:13,477 views Fetching latest company revenue (ORM version)...
+INFO 2025-10-17 14:54:31,374 views Fetching latest company revenue (ORM version)...
+ERROR 2025-10-17 14:54:35,488 views Error fetching company revenue: The annotation 'revenue' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 78, in get
+    .values(
+     ~~~~~~^
+        company_ref=F('company__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        last_updated=F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'revenue' conflicts with a field on the model.
+ERROR 2025-10-17 14:54:35,918 log Internal Server Error: /api/company-revenue/
+INFO 2025-10-17 14:54:35,977 basehttp - Broken pipe from ('127.0.0.1', 65508)
+ERROR 2025-10-17 14:54:53,608 views Error fetching company revenue: The annotation 'revenue' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 78, in get
+    .values(
+     ~~~~~~^
+        company_ref=F('company__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        last_updated=F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'revenue' conflicts with a field on the model.
+ERROR 2025-10-17 14:54:53,708 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 14:54:53,712 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 14:54:53,788 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,796 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,802 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,808 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,811 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,813 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,816 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,817 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,819 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,824 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,830 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-10-17 14:54:53,863 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-10-17 14:56:44,675 views Fetching latest company revenue (ORM version)...
+ERROR 2025-10-17 14:57:06,249 views Error fetching company revenue: The annotation 'revenue' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 78, in get
+    .values(
+     ~~~~~~^
+        company_ref=F('company__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        last_updated=F('timestamp')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'revenue' conflicts with a field on the model.
+ERROR 2025-10-17 14:57:06,357 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-17 14:57:06,359 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5304
+INFO 2025-10-17 15:00:35,753 autoreload Watching for file changes with StatReloader
+INFO 2025-10-17 15:00:47,779 views Fetching latest company revenue (ORM version)...
+WARNING 2025-10-17 15:01:07,674 log Not Found: /
+WARNING 2025-10-17 15:01:07,788 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-17 15:01:32,048 views Fetching latest company revenue (ORM version)...
+INFO 2025-10-17 15:02:17,451 views Returned 336635 latest company revenue records.
+INFO 2025-10-17 15:03:40,023 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 136669242
+INFO 2025-10-17 15:04:34,580 views Returned 336621 latest company revenue records.
