@@ -2,14 +2,17 @@ import logging
 from django.db import models
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.http import JsonResponse
+from django.db import connection
+from rest_framework import status
+from django.db.models import Max, F
+logger = logging.getLogger('polls')
 from .models import (
     User, Company, CompanyStats, LinkedinPerson,
     CompanyExecutives, SavedDigests, MandrillEmailMsg
 )
-from django.db.models import Max, F
-logger = logging.getLogger('polls')
 
-# 1️⃣ Premium Users (your DRF version)
+# Premium Users (your DRF version)
 class PremiumUsersView(APIView):
     def get(self, request):
         logger.info("Fetching premium users...")
@@ -30,7 +33,7 @@ class PremiumUsersView(APIView):
             return Response({"error": "Internal Server Error"}, status=500)
 
 
-# 2️⃣ Unlimited, Active Users
+# Unlimited, Active Users
 class ActivePremiumUsersView(APIView):
     def get(self, request):
         logger.info("Fetching active premium users...")
@@ -51,7 +54,7 @@ class ActivePremiumUsersView(APIView):
             return Response({"error": "Internal Server Error"}, status=500)
 
 
-# 3️⃣ Company Revenue
+# Company Revenue
 
 class CompanyRevenueView(APIView):
     def get(self, request):
@@ -98,7 +101,7 @@ class CompanyRevenueView(APIView):
             logger.error(f"Error fetching company revenue: {e}", exc_info=True)
             return Response({"error": "Internal Server Error"}, status=500)
 
-# 4️⃣ Executives Info
+# Executives Info
 class ExecutivesInfoView(APIView):
     def get(self, request):
         logger.info("Fetching executive information...")
@@ -124,8 +127,7 @@ class ExecutivesInfoView(APIView):
             return Response({"error": "Internal Server Error"}, status=500)
 
 
-# 5️⃣ Digest Email Stats
-from django.db import connection
+# Digest Email Stats
 
 class DigestEmailStatsView(APIView):
     def get(self, request):
@@ -165,3 +167,5 @@ class DigestEmailStatsView(APIView):
         except Exception as e:
             logger.error(f"Error fetching digest email stats: {e}", exc_info=True)
             return Response({"error": "Internal Server Error"}, status=500)
+        
+

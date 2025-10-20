@@ -5,6 +5,7 @@ from .views import (
     CompanyRevenueView,
     ExecutivesInfoView,
     DigestEmailStatsView,
+
 )
 
 urlpatterns = [
