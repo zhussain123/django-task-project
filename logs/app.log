@@ -1554,3 +1554,88 @@ INFO 2025-10-20 19:12:44,548 views Fetching executive information...
 INFO 2025-10-20 19:12:44,549 utils Fetching executives info (ORM version)...
 INFO 2025-10-20 19:12:47,982 views Returned 232 executives.
 INFO 2025-10-20 19:12:48,039 basehttp "GET /api/executives-info/ HTTP/1.1" 200 108278
+INFO 2025-10-21 12:26:45,391 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 12:26:52,126 log Not Found: /
+WARNING 2025-10-21 12:26:52,127 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 12:27:37,814 utils Fetching digest email stats for digest_id=28361 from utils...
+ERROR 2025-10-21 12:27:37,814 views Error fetching digest email stats: name 'connection' is not defined
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 65, in get
+    results = utils.get_digest_email_stats(digest_id)
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 110, in get_digest_email_stats
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^
+NameError: name 'connection' is not defined
+ERROR 2025-10-21 12:27:37,909 log Internal Server Error: /api/digest-stats/
+ERROR 2025-10-21 12:27:37,909 basehttp "GET /api/digest-stats/ HTTP/1.1" 500 5350
+INFO 2025-10-21 12:27:37,924 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,924 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,924 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,927 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,927 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,928 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,929 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,929 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,930 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,931 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,932 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-10-21 12:27:37,934 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-10-21 12:28:06,598 views Fetching executive information...
+INFO 2025-10-21 12:28:06,599 utils Fetching executives info (ORM version)...
+INFO 2025-10-21 12:28:11,177 views Returned 232 executives.
+INFO 2025-10-21 12:28:11,196 basehttp "GET /api/executives-info/ HTTP/1.1" 200 108278
+INFO 2025-10-21 12:28:25,078 utils Fetching latest company revenue from utils...
+ERROR 2025-10-21 12:28:25,078 views Error fetching company revenue: name 'Max' is not defined
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 35, in get
+    results = utils.get_company_revenue()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 46, in get_company_revenue
+    .annotate(latest_timestamp=Max('timestamp'))
+                               ^^^
+NameError: name 'Max' is not defined. Did you mean: 'max'?
+ERROR 2025-10-21 12:28:25,081 log Internal Server Error: /api/company-revenue/
+ERROR 2025-10-21 12:28:25,082 basehttp "GET /api/company-revenue/ HTTP/1.1" 500 5347
+INFO 2025-10-21 12:28:41,457 utils Fetching active premium users from utils...
+INFO 2025-10-21 12:28:46,149 basehttp "GET /api/active-premium-users/ HTTP/1.1" 200 4025945
+INFO 2025-10-21 12:29:17,768 utils Fetching premium users from utils...
+INFO 2025-10-21 12:29:21,223 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308566
+INFO 2025-10-21 12:30:20,755 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 12:30:21,346 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 12:30:42,220 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 12:31:31,764 utils Fetching premium users from utils...
+INFO 2025-10-21 12:31:35,518 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308566
+INFO 2025-10-21 12:32:04,780 basehttp - Broken pipe from ('127.0.0.1', 52928)
+INFO 2025-10-21 12:32:26,245 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 12:32:51,087 utils Fetching latest company revenue from utils...
+WARNING 2025-10-21 12:32:59,633 log Not Found: /
+WARNING 2025-10-21 12:32:59,634 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 12:33:11,803 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 12:34:22,574 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 12:34:26,370 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 12:35:46,356 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 147437803
+INFO 2025-10-21 12:38:09,258 utils Fetching digest email stats for digest_id=28361 from utils...
+ERROR 2025-10-21 12:38:09,268 views Error fetching digest email stats: name 'connection' is not defined
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 65, in get
+    results = utils.get_digest_email_stats(digest_id)
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 110, in get_digest_email_stats
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^
+NameError: name 'connection' is not defined
+ERROR 2025-10-21 12:38:09,337 log Internal Server Error: /api/digest-stats/
+ERROR 2025-10-21 12:38:09,338 basehttp "GET /api/digest-stats/ HTTP/1.1" 500 5350
+INFO 2025-10-21 12:39:03,738 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 12:39:05,080 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 12:39:28,307 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 12:39:37,256 utils Fetching digest email stats for digest_id=28361 from utils...
+INFO 2025-10-21 12:39:40,346 basehttp "GET /api/digest-stats/ HTTP/1.1" 200 5453
+INFO 2025-10-21 12:40:26,029 views Fetching executive information...
+INFO 2025-10-21 12:40:26,029 utils Fetching executives info (ORM version)...
+INFO 2025-10-21 12:40:29,156 views Returned 232 executives.
+INFO 2025-10-21 12:40:29,186 basehttp "GET /api/executives-info/ HTTP/1.1" 200 108278
+INFO 2025-10-21 12:40:41,605 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 12:42:17,592 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 147430367
+INFO 2025-10-21 12:43:08,511 utils Fetching active premium users from utils...
+INFO 2025-10-21 12:43:14,059 basehttp "GET /api/active-premium-users/ HTTP/1.1" 200 4025945
+INFO 2025-10-21 12:45:14,594 utils Fetching premium users from utils...
+INFO 2025-10-21 12:45:18,249 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308566
