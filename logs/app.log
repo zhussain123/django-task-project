@@ -1639,3 +1639,2021 @@ INFO 2025-10-21 12:43:08,511 utils Fetching active premium users from utils...
 INFO 2025-10-21 12:43:14,059 basehttp "GET /api/active-premium-users/ HTTP/1.1" 200 4025945
 INFO 2025-10-21 12:45:14,594 utils Fetching premium users from utils...
 INFO 2025-10-21 12:45:18,249 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308566
+INFO 2025-10-21 15:12:26,993 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 15:12:38,740 log Not Found: /
+WARNING 2025-10-21 15:12:38,741 basehttp "GET / HTTP/1.1" 404 2304
+WARNING 2025-10-21 15:12:38,862 log Not Found: /favicon.ico
+WARNING 2025-10-21 15:12:38,868 basehttp "GET /favicon.ico HTTP/1.1" 404 2355
+INFO 2025-10-21 15:15:17,353 utils Fetching premium users from utils...
+INFO 2025-10-21 15:15:21,328 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308832
+INFO 2025-10-21 15:40:14,332 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 15:40:21,787 utils Fetching premium users from utils...
+INFO 2025-10-21 15:40:25,590 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308832
+INFO 2025-10-21 15:40:33,510 utils Fetching premium users from utils...
+INFO 2025-10-21 15:40:36,981 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308832
+INFO 2025-10-21 15:40:41,894 utils Fetching premium users from utils...
+INFO 2025-10-21 15:40:46,767 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308832
+INFO 2025-10-21 15:44:18,717 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 15:44:31,146 log Not Found: /
+WARNING 2025-10-21 15:44:31,146 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 15:44:37,699 utils Fetching premium users from utils...
+INFO 2025-10-21 15:44:41,587 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308832
+INFO 2025-10-21 15:52:57,478 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 15:53:13,100 log Not Found: /
+WARNING 2025-10-21 15:53:13,101 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 15:53:16,038 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:53:16,039 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:53:16,102 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:54:39,977 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 15:54:40,676 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 15:54:45,960 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:54:45,961 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:54:45,989 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:54:56,490 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 15:55:00,329 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:55:00,329 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:55:00,377 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:55:12,894 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 15:55:13,559 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 15:55:17,519 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:55:17,520 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:55:17,566 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:55:33,802 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 15:55:34,519 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 15:59:52,614 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:52,615 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:52,669 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:59:53,338 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:53,338 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:53,344 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:59:53,778 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:53,779 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:53,785 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:59:53,962 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:53,962 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:53,967 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:59:54,096 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:54,097 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:54,102 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:59:54,497 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:54,498 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:54,503 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:59:54,657 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:54,657 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:54,662 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:59:55,002 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:55,003 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:55,009 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 15:59:55,210 utils Fetching premium users from utils...
+ERROR 2025-10-21 15:59:55,210 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user='0'
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 15:59:55,215 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:04:37,682 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 16:04:38,349 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 16:04:45,343 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 16:04:49,281 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:04:49,282 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 16:04:49,317 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:06:52,606 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\models.py changed, reloading.
+INFO 2025-10-21 16:06:53,272 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 16:07:00,536 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 16:07:05,736 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:07:05,738 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 16:07:05,795 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:09:09,727 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:09:09,727 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 16:09:09,734 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:09:10,998 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:09:10,998 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 16:09:11,004 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:09:11,374 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:09:11,374 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 16:09:11,379 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:09:11,615 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:09:11,616 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 16:09:11,621 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:09:11,823 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:09:11,823 utils Error fetching premium users: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 17, in get_premium_users
+    User.objects.filter(
+    ~~~~~~~~~~~~~~~~~~~^
+        receipt='Unlimited',
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_user=0
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'ActiveStatus' into field. Choices are: account_quota, account_quota_start_date, activestatus, admin_id, ai_certification_completion_date, app_name, auditentry, certification_completion_date, certification_name, certification_tooltip_date, commulativelogin, companypdfcount, createddate, daily_alert_email_subscription, delegate_permission, device_token, dynamics_license, email, emailsubscription, enterprise_status, ext, first_name, firstname, fullname, gilroy_tooltip_date, industry_quota, industry_quota_start_date, ip, is_password_match, is_staff, is_superuser, is_wb, isdeleted, language, last_activity, last_login, last_name, lastlogindate, lastname, linkedinexpiration, linkedinlogintime, linkedinname, linkedinoauthsecret, linkedinoauthtoken, linkedinprofilepic, linkedinrequest, linkedinusername, location, mapping_tooltip_date, mappingpopup, notifyemail, oauthsecret, oauthtoken, password, person, person_id, personpdfcount, phone, profile_quota, profile_quota_start_date, profilepic, promotioncode, receipt, receiptdata, reporting_user, salesforce_license, salesforcelogin, salesforcerefresh, salesforcetoken, salesforceurl, saveddigests, show_daily_iq, signup_appname, subscriptionexpiration, test_user, token, twitterintermediate, twitterprofilepic, twitterusername, user_company_name, user_type, userid, username, version, wb_password, wb_username, web_device_token, xiq_notified
+INFO 2025-10-21 16:09:11,829 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:14:34,131 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 16:14:43,657 log Not Found: /
+WARNING 2025-10-21 16:14:43,659 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 16:14:50,699 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:14:50,702 utils Error fetching premium users: The annotation 'username' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 24, in get_premium_users
+    .values(
+     ~~~~~~^
+        'UserId',
+        ^^^^^^^^^
+    ...<2 lines>...
+        personality_name=models.F('person__personality_archetype__name'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'username' conflicts with a field on the model.
+INFO 2025-10-21 16:14:50,807 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:22:20,654 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 16:22:29,669 log Not Found: /
+WARNING 2025-10-21 16:22:29,671 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 16:22:37,688 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:22:37,692 utils Error fetching premium users: The annotation 'userid' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 24, in get_premium_users
+    .annotate(
+     ~~~~~~~~^
+        userid=F('userid'),
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        personality_name=F('person__personality_archetype__name'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'userid' conflicts with a field on the model.
+INFO 2025-10-21 16:22:37,816 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:22:40,503 utils Fetching premium users from utils...
+ERROR 2025-10-21 16:22:40,505 utils Error fetching premium users: The annotation 'userid' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 24, in get_premium_users
+    .annotate(
+     ~~~~~~~~^
+        userid=F('userid'),
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        personality_name=F('person__personality_archetype__name'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'userid' conflicts with a field on the model.
+INFO 2025-10-21 16:22:40,521 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5275
+INFO 2025-10-21 16:28:01,103 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 16:28:08,469 basehttp "GET /api/premium-users/ HTTP/1.1" 200 5441
+INFO 2025-10-21 16:29:46,447 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 16:29:48,961 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 16:29:59,545 basehttp "GET /api/premium-users/ HTTP/1.1" 200 244329
+INFO 2025-10-21 17:07:53,619 utils Fetching active premium users from utils...
+INFO 2025-10-21 17:07:59,470 basehttp "GET /api/active-premium-users/ HTTP/1.1" 200 4025945
+INFO 2025-10-21 17:12:54,018 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 17:16:41,365 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 147526768
+INFO 2025-10-21 17:23:05,776 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 17:23:41,590 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 17:23:48,177 utils Fetching latest company revenue from utils...
+WARNING 2025-10-21 17:24:41,045 log Not Found: /
+WARNING 2025-10-21 17:24:41,046 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 17:25:46,102 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 17:26:12,809 basehttp - Broken pipe from ('127.0.0.1', 63981)
+INFO 2025-10-21 17:29:01,901 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 147586951
+INFO 2025-10-21 17:33:21,155 utils Fetching digest email stats for digest_id=28361 from utils...
+INFO 2025-10-21 17:33:24,285 basehttp "GET /api/digest-stats/ HTTP/1.1" 200 5453
+INFO 2025-10-21 17:33:39,186 views Fetching executive information...
+INFO 2025-10-21 17:33:39,188 utils Fetching executives info (ORM version)...
+INFO 2025-10-21 17:33:42,703 views Returned 232 executives.
+INFO 2025-10-21 17:33:42,778 basehttp "GET /api/executives-info/ HTTP/1.1" 200 108278
+INFO 2025-10-21 17:53:37,485 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 17:53:49,585 log Not Found: /
+WARNING 2025-10-21 17:53:49,589 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 17:53:56,777 utils Fetching active premium users from utils...
+INFO 2025-10-21 17:54:00,898 basehttp "GET /api/active-premium-users/ HTTP/1.1" 200 361703
+INFO 2025-10-21 17:57:32,391 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 17:57:39,977 log Not Found: /
+WARNING 2025-10-21 17:57:39,979 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 17:57:50,843 utils Fetching digest email stats for digest_id=28361 from utils...
+INFO 2025-10-21 17:57:53,968 basehttp "GET /api/digest-stats/ HTTP/1.1" 200 5559
+INFO 2025-10-21 17:58:15,822 utils Fetching latest company revenue from utils...
+INFO 2025-10-21 18:00:46,756 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 147741466
+INFO 2025-10-21 18:15:11,181 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 18:15:22,970 log Not Found: /
+WARNING 2025-10-21 18:15:22,972 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 18:15:30,322 views Fetching executive information...
+INFO 2025-10-21 18:15:30,322 utils Fetching executives info (ORM version)...
+ERROR 2025-10-21 18:15:30,326 utils Unexpected error in get_executives_info: Cannot resolve keyword 'name' into field. Choices are: company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'name' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 134, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        Name=F('contactid__name'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Designation=F('contactid__designation'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Headline=F('contactid__headline')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+INFO 2025-10-21 18:15:30,359 views Returned 3 executives.
+INFO 2025-10-21 18:15:30,438 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5723
+INFO 2025-10-21 18:17:31,304 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 18:17:34,368 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 18:18:17,161 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 18:18:19,240 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 18:18:27,402 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 18:18:33,379 views Fetching executive information...
+INFO 2025-10-21 18:18:33,380 utils Fetching executives info (ORM version)...
+ERROR 2025-10-21 18:18:33,385 utils Unexpected error in get_executives_info: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'designation' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 126, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        Name=Concat(F('contactid__fname'), Value(' '), F('contactid__lname')),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Designation=F('contactid__designation'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Headline=F('contactid__headline')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+INFO 2025-10-21 18:18:33,418 views Returned 3 executives.
+INFO 2025-10-21 18:18:33,509 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5736
+INFO 2025-10-21 18:18:34,776 views Fetching executive information...
+INFO 2025-10-21 18:18:34,778 utils Fetching executives info (ORM version)...
+ERROR 2025-10-21 18:18:34,781 utils Unexpected error in get_executives_info: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'designation' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 126, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        Name=Concat(F('contactid__fname'), Value(' '), F('contactid__lname')),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Designation=F('contactid__designation'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Headline=F('contactid__headline')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+INFO 2025-10-21 18:18:34,795 views Returned 3 executives.
+INFO 2025-10-21 18:18:34,815 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5736
+INFO 2025-10-21 18:18:35,520 views Fetching executive information...
+INFO 2025-10-21 18:18:35,522 utils Fetching executives info (ORM version)...
+ERROR 2025-10-21 18:18:35,526 utils Unexpected error in get_executives_info: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'designation' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 126, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        Name=Concat(F('contactid__fname'), Value(' '), F('contactid__lname')),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Designation=F('contactid__designation'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Headline=F('contactid__headline')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+INFO 2025-10-21 18:18:35,540 views Returned 3 executives.
+INFO 2025-10-21 18:18:35,551 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5736
+INFO 2025-10-21 18:18:35,737 views Fetching executive information...
+INFO 2025-10-21 18:18:35,738 utils Fetching executives info (ORM version)...
+ERROR 2025-10-21 18:18:35,741 utils Unexpected error in get_executives_info: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'designation' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 126, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        Name=Concat(F('contactid__fname'), Value(' '), F('contactid__lname')),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Designation=F('contactid__designation'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Headline=F('contactid__headline')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+INFO 2025-10-21 18:18:35,758 views Returned 3 executives.
+INFO 2025-10-21 18:18:35,778 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5736
+INFO 2025-10-21 18:18:35,940 views Fetching executive information...
+INFO 2025-10-21 18:18:35,941 utils Fetching executives info (ORM version)...
+ERROR 2025-10-21 18:18:35,946 utils Unexpected error in get_executives_info: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'designation' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 126, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        Name=Concat(F('contactid__fname'), Value(' '), F('contactid__lname')),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Designation=F('contactid__designation'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Headline=F('contactid__headline')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+INFO 2025-10-21 18:18:35,960 views Returned 3 executives.
+INFO 2025-10-21 18:18:35,981 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5736
+INFO 2025-10-21 18:21:27,246 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 18:21:27,880 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 18:21:36,549 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 18:21:40,487 views Fetching executive information...
+INFO 2025-10-21 18:21:40,488 utils Fetching executives info (ORM version)...
+ERROR 2025-10-21 18:21:40,491 utils Unexpected error in get_executives_info: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'designation' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 127, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        Name=Concat(F('contactid__fname'), Value(' '), F('contactid__lname')),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Designation=F('contactid__designation'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Headline=F('contactid__headline')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+INFO 2025-10-21 18:21:40,502 views Returned 3 executives.
+INFO 2025-10-21 18:21:40,535 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5736
+INFO 2025-10-21 18:21:42,867 views Fetching executive information...
+INFO 2025-10-21 18:21:42,867 utils Fetching executives info (ORM version)...
+ERROR 2025-10-21 18:21:42,868 utils Unexpected error in get_executives_info: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'designation' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 127, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        Name=Concat(F('contactid__fname'), Value(' '), F('contactid__lname')),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Designation=F('contactid__designation'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Headline=F('contactid__headline')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'designation' into field. Choices are: Name, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+INFO 2025-10-21 18:21:42,871 views Returned 3 executives.
+INFO 2025-10-21 18:21:42,875 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5736
+INFO 2025-10-21 18:27:25,062 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 18:27:38,057 log Not Found: /
+WARNING 2025-10-21 18:27:38,058 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 18:27:42,384 views Fetching executive information...
+INFO 2025-10-21 18:27:42,385 utils Fetching executives info from utils...
+INFO 2025-10-21 18:27:46,264 views Returned 2 executives.
+INFO 2025-10-21 18:27:46,325 basehttp "GET /api/executives-info/ HTTP/1.1" 200 90429
+INFO 2025-10-21 18:31:19,256 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 18:31:25,316 views Fetching executive information...
+INFO 2025-10-21 18:31:25,317 utils Fetching executives info from utils...
+INFO 2025-10-21 18:31:28,793 views Returned 2 executives.
+INFO 2025-10-21 18:31:28,853 basehttp "GET /api/executives-info/ HTTP/1.1" 200 90429
+INFO 2025-10-21 18:31:54,382 views Fetching executive information...
+INFO 2025-10-21 18:31:54,383 utils Fetching executives info from utils...
+INFO 2025-10-21 18:31:57,511 views Returned 2 executives.
+INFO 2025-10-21 18:31:57,525 basehttp "GET /api/executives-info/ HTTP/1.1" 200 90429
+INFO 2025-10-21 18:32:22,914 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 18:32:27,796 views Fetching executive information...
+INFO 2025-10-21 18:32:27,796 utils Fetching executives info from utils...
+INFO 2025-10-21 18:32:31,301 views Returned 2 executives.
+INFO 2025-10-21 18:32:31,353 basehttp "GET /api/executives-info/ HTTP/1.1" 200 90429
+INFO 2025-10-21 18:38:38,352 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 18:38:42,643 views Fetching executive information...
+INFO 2025-10-21 18:38:42,643 utils Fetching executives info from utils...
+INFO 2025-10-21 18:38:46,039 views Returned 2 executives.
+INFO 2025-10-21 18:38:46,067 basehttp "GET /api/executives-info/ HTTP/1.1" 200 90429
+INFO 2025-10-21 18:49:07,363 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-21 18:49:14,033 log Not Found: /
+WARNING 2025-10-21 18:49:14,033 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-21 18:49:30,221 utils Fetching active company revenue (ORM version)...
+ERROR 2025-10-21 18:49:30,222 utils Unexpected error in get_company_revenue: name 'Company' is not defined
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 88, in get_company_revenue
+    Company.objects
+    ^^^^^^^
+NameError: name 'Company' is not defined
+INFO 2025-10-21 18:49:30,258 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5467
+INFO 2025-10-21 19:01:45,357 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 19:01:59,420 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:01:59,421 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:01:59,443 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:00,752 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:00,752 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:00,756 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:00,967 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:00,968 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:00,972 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:01,184 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:01,185 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:01,189 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:01,375 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:01,376 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:01,380 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:01,695 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:01,696 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:01,699 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:01,888 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:01,888 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:01,892 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:02,071 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:02,072 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:02,075 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:02,239 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:02,240 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:02,244 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:02,448 utils Fetching company revenue (active_status=1) via ORM...
+ERROR 2025-10-21 19:02:02,448 utils Unexpected error in get_company_revenue: The annotation 'website' conflicts with a field on the model.
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 93, in get_company_revenue
+    .values(
+     ~~~~~~^
+        company_id=F('companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        revenue=F('stats__revenue')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1694, in _annotate
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The annotation 'website' conflicts with a field on the model.
+INFO 2025-10-21 19:02:02,453 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 5499
+INFO 2025-10-21 19:02:04,463 views Fetching executive information...
+INFO 2025-10-21 19:02:04,463 utils Fetching executives info from utils...
+INFO 2025-10-21 19:02:07,885 views Returned 2 executives.
+INFO 2025-10-21 19:02:07,906 basehttp "GET /api/executives-info/ HTTP/1.1" 200 90429
+INFO 2025-10-21 19:03:37,053 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 19:03:41,307 utils Fetching company revenue (active_status=1) via ORM...
+INFO 2025-10-21 19:04:32,657 basehttp "GET /api/company-revenue/ HTTP/1.1" 200 113124297
+INFO 2025-10-21 19:06:44,412 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 19:06:45,220 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 19:07:10,755 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 19:07:44,589 views Fetching executive information...
+INFO 2025-10-21 19:07:44,590 utils Fetching executives info from utils...
+ERROR 2025-10-21 19:07:44,591 utils Unexpected error in get_executives_info: name 'Coalesce' is not defined
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 160, in get_executives_info
+    Coalesce(F('contactid__fname'), Value('')),
+    ^^^^^^^^
+NameError: name 'Coalesce' is not defined
+INFO 2025-10-21 19:07:44,592 views Returned 3 executives.
+INFO 2025-10-21 19:07:44,619 basehttp "GET /api/executives-info/ HTTP/1.1" 200 5468
+INFO 2025-10-21 19:10:39,371 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-21 19:10:42,203 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 19:10:59,924 autoreload Watching for file changes with StatReloader
+INFO 2025-10-21 19:11:03,727 views Fetching executive information...
+INFO 2025-10-21 19:11:03,727 utils Fetching executives info from utils...
+INFO 2025-10-21 19:11:07,196 views Returned 2 executives.
+INFO 2025-10-21 19:11:07,312 basehttp "GET /api/executives-info/ HTTP/1.1" 200 90429

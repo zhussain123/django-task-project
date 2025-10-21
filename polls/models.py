@@ -7,9 +7,6 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
-
-
-
 class LinkedinRequest(models.Model):
     type = models.CharField(max_length=20, db_collation='utf8mb3_general_ci', blank=True, null=True)
     query = models.CharField(max_length=300, db_collation='utf8mb3_general_ci', blank=True, null=True)
@@ -207,6 +204,7 @@ class Persons(models.Model):
 
 
 class ArchetypeDetails(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=20, blank=True, null=True)
     disc_personality = models.CharField(max_length=2, blank=True, null=True)
     color = models.CharField(max_length=20, blank=True, null=True)
@@ -215,8 +213,6 @@ class ArchetypeDetails(models.Model):
     class Meta:
         managed = False
         db_table = 'archetype_details'
-from django.db import models
-
 
 class Company(models.Model):
     companyid = models.AutoField(db_column='CompanyId', primary_key=True)  # Field name made lowercase.
