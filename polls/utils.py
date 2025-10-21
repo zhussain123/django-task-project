@@ -3,8 +3,8 @@ from django.db import connection, DatabaseError
 from django.db.models import F, Value, Max
 from django.db.models.functions import Concat
 import logging
-from polls.models import Company, CompanyStats
-from .models import User, CompanyStats, LinkedinPerson , CompanyExecutives
+from polls.models import Company
+from .models import User, CompanyExecutives
 logger = logging.getLogger('polls')
 logger = logging.getLogger(__name__)
 
@@ -84,14 +84,6 @@ def get_active_premium_users():
 #  Company Revenue
 
 def get_company_revenue():
-    """
-    Fetch companies with active (active_status=1) stats records and their revenue.
-    ORM equivalent of:
-    SELECT DISTINCT c.CompanyId, c.CompanyName, c.WebSite, c.Industry, cs.Revenue
-    FROM company c
-    JOIN company_stats cs ON c.CompanyId = cs.ComanyId
-    WHERE cs.active_status = '1';
-    """
     try:
         logger.info("Fetching company revenue (active_status=1) via ORM...")
 
@@ -140,10 +132,6 @@ def get_company_revenue():
 #  Executives Info
 
 def get_executives_info():
-    """
-    Fetch executive-level contacts for given company IDs.
-    Returns full name, designation, and LinkedIn URL for each executive.
-    """
     try:
         logger.info("Fetching executives info from utils...")
 
