@@ -999,3 +999,558 @@ INFO 2025-10-20 17:43:52,843 basehttp "GET /static/rest_framework/js/ajax-form.j
 INFO 2025-10-20 17:43:52,844 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
 INFO 2025-10-20 17:43:52,845 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
 INFO 2025-10-20 17:43:52,846 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-10-20 18:34:55,293 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-20 18:35:12,278 log Not Found: /
+WARNING 2025-10-20 18:35:12,281 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-20 18:35:22,797 views Fetching active premium users...
+INFO 2025-10-20 18:35:27,446 views Returned 823 active premium users.
+INFO 2025-10-20 18:35:28,842 basehttp "GET /api/active-premium-users/ HTTP/1.1" 200 4030482
+INFO 2025-10-20 18:41:04,559 views Fetching premium users...
+INFO 2025-10-20 18:41:08,300 views Returned 1237 premium users.
+INFO 2025-10-20 18:41:08,601 basehttp "GET /api/premium-users/ HTTP/1.1" 200 308831
+INFO 2025-10-20 18:49:50,267 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-20 18:49:58,145 log Not Found: /
+WARNING 2025-10-20 18:49:58,147 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-20 18:50:25,394 utils Fetching executives info from utils...
+INFO 2025-10-20 18:50:29,136 basehttp "GET /api/executives-info/ HTTP/1.1" 200 104515
+INFO 2025-10-20 18:58:46,247 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-20 18:58:46,880 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:01:04,506 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-20 19:01:11,106 log Not Found: /
+WARNING 2025-10-20 19:01:11,107 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-20 19:01:28,758 views Fetching executive information...
+INFO 2025-10-20 19:01:28,759 utils Fetching executives info (ORM version)...
+ERROR 2025-10-20 19:01:28,760 views Error fetching executives info: Cannot resolve keyword 'name' into field. Choices are: CompanyId, CompanyName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'name' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 47, in get
+    executives = utils.get_executives_info()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 81, in get_executives_info
+    .values(
+     ~~~~~~^
+        CompanyId=models.F('companyid__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        LinkedInURL=models.F('contactid__linkedinperson__linkedinurl')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1368, in values
+    clone = self._values(*fields, **expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1361, in _values
+    clone = clone.annotate(**expressions)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: CompanyId, CompanyName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-20 19:01:28,834 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-20 19:01:28,835 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5347
+INFO 2025-10-20 19:04:07,912 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-20 19:04:08,500 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:05:51,015 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-20 19:05:51,607 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:06:04,748 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:06:13,703 views Fetching executive information...
+INFO 2025-10-20 19:06:13,704 utils Fetching executives info (ORM version)...
+ERROR 2025-10-20 19:06:13,705 views Error fetching executives info: name 'Concat' is not defined
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 47, in get
+    executives = utils.get_executives_info()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 84, in get_executives_info
+    ExecutiveName=Concat(F('contactid__fname'), Value(' '), F('contactid__lname')),
+                  ^^^^^^
+NameError: name 'Concat' is not defined
+ERROR 2025-10-20 19:06:13,728 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-20 19:06:13,729 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5347
+INFO 2025-10-20 19:07:13,276 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-20 19:07:13,925 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:07:22,394 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:07:29,520 views Fetching executive information...
+INFO 2025-10-20 19:07:29,521 utils Fetching executives info (ORM version)...
+ERROR 2025-10-20 19:07:29,522 views Error fetching executives info: Cannot resolve keyword 'linkedinperson' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'linkedinperson' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 47, in get
+    executives = utils.get_executives_info()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 82, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        CompanyId=F('companyid__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        LinkedInURL=F('contactid__linkedinperson__linkedinurl')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1923, in transform
+    wrapped = previous(field, alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'linkedinperson' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-20 19:07:29,548 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-20 19:07:29,549 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5347
+INFO 2025-10-20 19:07:31,729 views Fetching executive information...
+INFO 2025-10-20 19:07:31,730 utils Fetching executives info (ORM version)...
+ERROR 2025-10-20 19:07:31,731 views Error fetching executives info: Cannot resolve keyword 'linkedinperson' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'linkedinperson' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 47, in get
+    executives = utils.get_executives_info()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 82, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        CompanyId=F('companyid__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        LinkedInURL=F('contactid__linkedinperson__linkedinurl')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1923, in transform
+    wrapped = previous(field, alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'linkedinperson' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-20 19:07:31,736 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-20 19:07:31,737 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5347
+INFO 2025-10-20 19:07:32,690 views Fetching executive information...
+INFO 2025-10-20 19:07:32,690 utils Fetching executives info (ORM version)...
+ERROR 2025-10-20 19:07:32,691 views Error fetching executives info: Cannot resolve keyword 'linkedinperson' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'linkedinperson' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 47, in get
+    executives = utils.get_executives_info()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 82, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        CompanyId=F('companyid__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        LinkedInURL=F('contactid__linkedinperson__linkedinurl')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1923, in transform
+    wrapped = previous(field, alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'linkedinperson' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-20 19:07:32,696 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-20 19:07:32,697 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5347
+INFO 2025-10-20 19:07:32,906 views Fetching executive information...
+INFO 2025-10-20 19:07:32,906 utils Fetching executives info (ORM version)...
+ERROR 2025-10-20 19:07:32,907 views Error fetching executives info: Cannot resolve keyword 'linkedinperson' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'linkedinperson' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 47, in get
+    executives = utils.get_executives_info()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 82, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        CompanyId=F('companyid__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        LinkedInURL=F('contactid__linkedinperson__linkedinurl')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1923, in transform
+    wrapped = previous(field, alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'linkedinperson' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-20 19:07:32,912 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-20 19:07:32,913 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5347
+INFO 2025-10-20 19:10:11,178 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-20 19:10:11,785 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:10:23,057 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-20 19:10:29,542 log Not Found: /
+WARNING 2025-10-20 19:10:29,543 basehttp "GET / HTTP/1.1" 404 2304
+INFO 2025-10-20 19:10:33,490 views Fetching executive information...
+INFO 2025-10-20 19:10:33,490 utils Fetching executives info (ORM version)...
+ERROR 2025-10-20 19:10:33,492 views Error fetching executives info: Cannot resolve keyword 'linkedinperson_set' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'linkedinperson_set' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 47, in get
+    executives = utils.get_executives_info()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 83, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        CompanyId=F('companyid__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        LinkedInURL=F('contactid__linkedinperson_set__linkedinurl'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1923, in transform
+    wrapped = previous(field, alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'linkedinperson_set' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-20 19:10:33,523 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-20 19:10:33,523 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5347
+INFO 2025-10-20 19:10:51,205 views Fetching executive information...
+INFO 2025-10-20 19:10:51,205 utils Fetching executives info (ORM version)...
+ERROR 2025-10-20 19:10:51,206 views Error fetching executives info: Cannot resolve keyword 'linkedinperson_set' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+Traceback (most recent call last):
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1924, in transform
+    return self.try_transform(wrapped, name)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1458, in try_transform
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Unsupported lookup 'linkedinperson_set' for IntegerField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\views.py", line 47, in get
+    executives = utils.get_executives_info()
+  File "C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py", line 83, in get_executives_info
+    .annotate(
+     ~~~~~~~~^
+        CompanyId=F('companyid__companyid'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        LinkedInURL=F('contactid__linkedinperson_set__linkedinurl'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 2066, in resolve_ref
+    transform = join_info.transform_function(targets[0], final_alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1923, in transform
+    wrapped = previous(field, alias)
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1928, in transform
+    raise last_field_exception
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1901, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zhussain\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\query.py", line 1806, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'linkedinperson_set' into field. Choices are: CompanyId, CompanyName, ExecutiveName, company_name, contactid, email, email_status, error, executive_links, file_name, fname, job_title, linkedinurl, lname, notify, promotion_code, requestid, requestid_id, responseid, responseid_id, searchid, searchid_id, status, type
+ERROR 2025-10-20 19:10:51,212 log Internal Server Error: /api/executives-info/
+ERROR 2025-10-20 19:10:51,213 basehttp "GET /api/executives-info/ HTTP/1.1" 500 5347
+INFO 2025-10-20 19:12:28,187 autoreload C:\Users\zhussain\OneDrive - xIQ Inc\Desktop\Django\djangotutorial\mysite\polls\utils.py changed, reloading.
+INFO 2025-10-20 19:12:28,813 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:12:37,367 autoreload Watching for file changes with StatReloader
+INFO 2025-10-20 19:12:44,548 views Fetching executive information...
+INFO 2025-10-20 19:12:44,549 utils Fetching executives info (ORM version)...
+INFO 2025-10-20 19:12:47,982 views Returned 232 executives.
+INFO 2025-10-20 19:12:48,039 basehttp "GET /api/executives-info/ HTTP/1.1" 200 108278
